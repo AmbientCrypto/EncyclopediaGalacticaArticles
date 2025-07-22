@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encyclopedia Galactica</title>
+    <link rel="stylesheet" href="assets/css/encyclopedia.css">
+    <style>
+        /* Additional styles for index page */
+        .category-section {
+            margin-bottom: 4rem;
+        }
+        
+        .category-title {
+            color: var(--accent-cyan);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-cyan);
+            padding-bottom: 0.5rem;
+        }
+        
+        .category-description {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .category-stats {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .category-stats .stat {
+            background: var(--accent-purple);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .article-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .article-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .article-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .article-link:hover {
+            color: var(--accent-purple);
+        }
+        
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .download-links-inline {
+            margin-left: auto;
+        }
+        
+        .download-link-small {
+            background: var(--accent-purple);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 0.5rem;
+        }
+        
+        .download-link-small.pdf {
+            background: #dc2626;
+        }
+        
+        .download-link-small.epub {
+            background: #059669;
+        }
+        
+        .download-link-small:hover {
+            opacity: 0.8;
+        }
+        
+        .search-box {
+            margin-bottom: 2rem;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-purple);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .download-links-inline {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Encyclopedia Galactica</h1>
+            <p class="subtitle">A comprehensive collection of knowledge across the known universe</p>
+        </header>
+        
+        <main class="main-content">
+            <div class="welcome-section">
+                <h2>Welcome to the Encyclopedia Galactica</h2>
+                <p>This repository contains a comprehensive collection of articles covering diverse topics across science, history, culture, and beyond. Each article is meticulously researched and written to provide deep insights into its subject matter.</p>
+            </div>
+            
+            <div class="stats-section">
+                <div class="stat-item">
+                    <span class="stat-number">61</span>
+                    <span class="stat-label">Articles</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Categories</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1,857,948</span>
+                    <span class="stat-label">Words</span>
+                </div>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search articles..." id="searchInput">
+            </div>
+            
+            <div class="categories-container">
+                
+                <div class="category-section">
+                    <h2 class="category-title">AI Model Development &amp; Training</h2>
+                    <p class="category-description">Articles covering methodologies, architectures, and techniques for training, fine-tuning, and optimizing AI models.</p>
+                    <div class="category-stats">
+                        <span class="stat">16 articles</span>
+                        <span class="stat">463,097 words</span>
+                    </div>
+                    <div class="articles-grid">
+                        
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/beginners_guide_to/index.html" class="article-link">Beginners_Guide_To</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">35,223 words</span>
+                            <span class="reading-time">176 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/beginners_guide_to/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/beginners_guide_to/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/chain-of-thought_reasoning_in/index.html" class="article-link">Chain Of Thought_Reasoning_In</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">29,087 words</span>
+                            <span class="reading-time">145 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/chain-of-thought_reasoning_in/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/chain-of-thought_reasoning_in/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/energy-efficient_ai/index.html" class="article-link">Energy Efficient_Ai</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">34,858 words</span>
+                            <span class="reading-time">174 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/energy-efficient_ai/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/energy-efficient_ai/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/fine-tuning_chatgpt/index.html" class="article-link">Fine Tuning_Chatgpt</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">18,233 words</span>
+                            <span class="reading-time">91 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/fine-tuning_chatgpt/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/hyperspace_prompt/index.html" class="article-link">Hyperspace_Prompt</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">23,719 words</span>
+                            <span class="reading-time">118 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/hyperspace_prompt/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/in-chain_differential/index.html" class="article-link">In Chain_Differential</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">33,409 words</span>
+                            <span class="reading-time">167 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/in-chain_differential/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/in-chain_differential/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/meta-learning/index.html" class="article-link">Meta Learning</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">21,974 words</span>
+                            <span class="reading-time">109 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/meta-learning/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/meta-reinforcement/index.html" class="article-link">Meta Reinforcement</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">31,657 words</span>
+                            <span class="reading-time">158 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/meta-reinforcement/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/meta-reinforcement/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/neuro-symbolic/index.html" class="article-link">Neuro Symbolic</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">25,529 words</span>
+                            <span class="reading-time">127 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/neuro-symbolic/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/neuro-symbolic/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/no-code_ai/index.html" class="article-link">No Code_Ai</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">32,304 words</span>
+                            <span class="reading-time">161 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/no-code_ai/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/phase-shifted_neural/index.html" class="article-link">Phase Shifted_Neural</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">32,812 words</span>
+                            <span class="reading-time">164 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/phase-shifted_neural/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/phase-shifted_neural/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/prompt-based/index.html" class="article-link">Prompt Based</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">25,326 words</span>
+                            <span class="reading-time">126 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/prompt-based/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/retrieval-augmented_generation/index.html" class="article-link">Retrieval Augmented_Generation</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">27,647 words</span>
+                            <span class="reading-time">138 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/retrieval-augmented_generation/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/retrieval-augmented_generation/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/sparsely-activated/index.html" class="article-link">Sparsely Activated</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">26,087 words</span>
+                            <span class="reading-time">130 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/sparsely-activated/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/sparsely-activated/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/type-2/index.html" class="article-link">Type 2</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">34,450 words</span>
+                            <span class="reading-time">172 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/type-2/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/type-2/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/vision-language/index.html" class="article-link">Vision Language</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">30,782 words</span>
+                            <span class="reading-time">153 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/vision-language/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/vision-language/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    </div>
+                </div>
+            
+                <div class="category-section">
+                    <h2 class="category-title">Temporal AI &amp; Time-Based Learning</h2>
+                    <p class="category-description">Articles addressing AI techniques that incorporate time dynamics, feedback loops, future prediction, and temporal data processing.</p>
+                    <div class="category-stats">
+                        <span class="stat">11 articles</span>
+                        <span class="stat">337,432 words</span>
+                    </div>
+                    <div class="articles-grid">
+                        
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/chrono-loop_feedback/index.html" class="article-link">Chrono Loop_Feedback</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">30,353 words</span>
+                            <span class="reading-time">151 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/chrono-loop_feedback/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/chrono-loop_feedback/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/future-backpropagation/index.html" class="article-link">Future Backpropagation</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">28,922 words</span>
+                            <span class="reading-time">144 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/future-backpropagation/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/future-backpropagation/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/future-echo_planning/index.html" class="article-link">Future Echo_Planning</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">32,410 words</span>
+                            <span class="reading-time">162 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/future-echo_planning/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/future-echo_planning/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/future-signed_model/index.html" class="article-link">Future Signed_Model</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">26,785 words</span>
+                            <span class="reading-time">133 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/future-signed_model/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/future-signed_model/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/loop-aware_transformer/index.html" class="article-link">Loop Aware_Transformer</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">23,150 words</span>
+                            <span class="reading-time">115 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/loop-aware_transformer/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/post-temporal_directive/index.html" class="article-link">Post Temporal_Directive</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">34,109 words</span>
+                            <span class="reading-time">170 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/post-temporal_directive/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/post-temporal_directive/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/pre-causal_data/index.html" class="article-link">Pre Causal_Data</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">36,327 words</span>
+                            <span class="reading-time">181 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/quantum-temporal_data/index.html" class="article-link">Quantum Temporal_Data</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">35,051 words</span>
+                            <span class="reading-time">175 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/quantum-temporal_data/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/quantum-temporal_data/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/time-anchored/index.html" class="article-link">Time Anchored</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">27,673 words</span>
+                            <span class="reading-time">138 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/time-anchored/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/time-dilated_reward/index.html" class="article-link">Time Dilated_Reward</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">30,910 words</span>
+                            <span class="reading-time">154 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/time-dilated_reward/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/time-dilated_reward/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/time-reversed_gradient/index.html" class="article-link">Time Reversed_Gradient</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">31,742 words</span>
+                            <span class="reading-time">158 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/time-reversed_gradient/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/time-reversed_gradient/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    </div>
+                </div>
+            
+                <div class="category-section">
+                    <h2 class="category-title">Decentralized Systems &amp; Applications</h2>
+                    <p class="category-description">Articles focusing on decentralized technologies, protocols, and financial applications built on blockchain infrastructure.</p>
+                    <div class="category-stats">
+                        <span class="stat">10 articles</span>
+                        <span class="stat">325,522 words</span>
+                    </div>
+                    <div class="articles-grid">
+                        
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/cross-chain/index.html" class="article-link">Cross Chain</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">19,985 words</span>
+                            <span class="reading-time">99 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/cross-chain/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/cross-chain/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/cross-chain_liquidity/index.html" class="article-link">Cross Chain_Liquidity</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">33,348 words</span>
+                            <span class="reading-time">166 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/cross-chain_liquidity/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/cross-chain_liquidity/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/cross-margin_trading/index.html" class="article-link">Cross Margin_Trading</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">38,231 words</span>
+                            <span class="reading-time">191 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/cross-margin_trading/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/cross-margin_trading/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/decentralized_finance_defi/index.html" class="article-link">Decentralized_Finance_Defi</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">36,394 words</span>
+                            <span class="reading-time">181 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/decentralized_finance_defi/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/decentralized_finance_defi/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/inter-blockchain_communication/index.html" class="article-link">Inter Blockchain_Communication</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">32,263 words</span>
+                            <span class="reading-time">161 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/inter-blockchain_communication/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/inter-blockchain_communication/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/layer-zero_ai_communication/index.html" class="article-link">Layer Zero_Ai_Communication</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">31,203 words</span>
+                            <span class="reading-time">156 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/layer-zero_ai_communication/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/layer-zero_ai_communication/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/llm-powered_trading/index.html" class="article-link">Llm Powered_Trading</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">31,487 words</span>
+                            <span class="reading-time">157 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/llm-powered_trading/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/llm-powered_trading/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/natural_language_processing_nlp/index.html" class="article-link">Natural_Language_Processing_Nlp</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">29,246 words</span>
+                            <span class="reading-time">146 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/natural_language_processing_nlp/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/natural_language_processing_nlp/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/non-fungible_tokens/index.html" class="article-link">Non Fungible_Tokens</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">40,591 words</span>
+                            <span class="reading-time">202 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/non-fungible_tokens/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/non-fungible_tokens/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/on-chain/index.html" class="article-link">On Chain</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">32,774 words</span>
+                            <span class="reading-time">163 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/on-chain/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/on-chain/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    </div>
+                </div>
+            
+                <div class="category-section">
+                    <h2 class="category-title">Blockchain &amp; AI Integration</h2>
+                    <p class="category-description">Articles exploring the convergence of artificial intelligence and blockchain technology, including security, consensus, and decentralized applications.</p>
+                    <div class="category-stats">
+                        <span class="stat">9 articles</span>
+                        <span class="stat">277,869 words</span>
+                    </div>
+                    <div class="articles-grid">
+                        
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/ai-driven_smart_contract/index.html" class="article-link">Ai Driven_Smart_Contract</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">27,117 words</span>
+                            <span class="reading-time">135 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                            
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/ai-enhanced_consensus/index.html" class="article-link">Ai Enhanced_Consensus</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">36,031 words</span>
+                            <span class="reading-time">180 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/ai-enhanced_consensus/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/ai-enhanced_consensus/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/ai-secured_blockchain/index.html" class="article-link">Ai Secured_Blockchain</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">30,713 words</span>
+                            <span class="reading-time">153 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/ai-secured_blockchain/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/ai-secured_blockchain/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/blockchain-based_federated/index.html" class="article-link">Blockchain Based_Federated</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">30,479 words</span>
+                            <span class="reading-time">152 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/blockchain-based_federated/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/blockchain-based_federated/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/blockchain-managed_model/index.html" class="article-link">Blockchain Managed_Model</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">30,585 words</span>
+                            <span class="reading-time">152 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/blockchain-managed_model/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/blockchain-managed_model/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/crypto-incentivized_data/index.html" class="article-link">Crypto Incentivized_Data</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">35,213 words</span>
+                            <span class="reading-time">176 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/crypto-incentivized_data/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/crypto-incentivized_data/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/inter-planetary_file_system_ipfs_for_ai/index.html" class="article-link">Inter Planetary_File_System_Ipfs_For_Ai</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">26,813 words</span>
+                            <span class="reading-time">134 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/inter-planetary_file_system_ipfs_for_ai/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/on-chain_machine_learning/index.html" class="article-link">On Chain_Machine_Learning</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">32,539 words</span>
+                            <span class="reading-time">162 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/on-chain_machine_learning/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/on-chain_machine_learning/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/self-evolving_smart/index.html" class="article-link">Self Evolving_Smart</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">28,379 words</span>
+                            <span class="reading-time">141 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/self-evolving_smart/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/self-evolving_smart/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    </div>
+                </div>
+            
+                <div class="category-section">
+                    <h2 class="category-title">Autonomous &amp; Self-Improving Systems</h2>
+                    <p class="category-description">Articles focusing on AI systems capable of self-optimization, self-repair, self-governance, and autonomous decision-making.</p>
+                    <div class="category-stats">
+                        <span class="stat">9 articles</span>
+                        <span class="stat">294,209 words</span>
+                    </div>
+                    <div class="articles-grid">
+                        
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/decentralized_autonomous_organizations_dao_governance/index.html" class="article-link">Decentralized_Autonomous_Organizations_Dao_Governance</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">37,306 words</span>
+                            <span class="reading-time">186 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/decentralized_autonomous_organizations_dao_governance/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/decentralized_autonomous_organizations_dao_governance/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/echo-informed_decision/index.html" class="article-link">Echo Informed_Decision</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">31,908 words</span>
+                            <span class="reading-time">159 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/echo-informed_decision/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/echo-informed_decision/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/predictive_self-alignment/index.html" class="article-link">Predictive_Self Alignment</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">31,875 words</span>
+                            <span class="reading-time">159 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/predictive_self-alignment/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/predictive_self-alignment/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/self-consistency_decoding/index.html" class="article-link">Self Consistency_Decoding</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">30,092 words</span>
+                            <span class="reading-time">150 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/self-consistency_decoding/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/self-consistency_decoding/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/self-driving_ai_stack/index.html" class="article-link">Self Driving_Ai_Stack</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">30,326 words</span>
+                            <span class="reading-time">151 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/self-driving_ai_stack/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/self-driving_ai_stack/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/self-fulfilling_model/index.html" class="article-link">Self Fulfilling_Model</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">31,245 words</span>
+                            <span class="reading-time">156 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/self-fulfilling_model/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/self-fulfilling_model/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/self-healing_neural/index.html" class="article-link">Self Healing_Neural</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">32,891 words</span>
+                            <span class="reading-time">164 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/self-healing_neural/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/self-healing_neural/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/self-referential_model/index.html" class="article-link">Self Referential_Model</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">36,057 words</span>
+                            <span class="reading-time">180 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/self-referential_model/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/self-referential_model/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/self-supervised/index.html" class="article-link">Self Supervised</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">32,509 words</span>
+                            <span class="reading-time">162 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/self-supervised/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    </div>
+                </div>
+            
+                <div class="category-section">
+                    <h2 class="category-title">Advanced Cryptography &amp; Security</h2>
+                    <p class="category-description">Articles covering cryptographic techniques, security protocols, and privacy-preserving methods, including quantum resistance.</p>
+                    <div class="category-stats">
+                        <span class="stat">6 articles</span>
+                        <span class="stat">159,819 words</span>
+                    </div>
+                    <div class="articles-grid">
+                        
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/multi-signature_wallet/index.html" class="article-link">Multi Signature_Wallet</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">37,657 words</span>
+                            <span class="reading-time">188 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/multi-signature_wallet/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/multi-signature_wallet/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/post-quantum_signature/index.html" class="article-link">Post Quantum_Signature</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">32,223 words</span>
+                            <span class="reading-time">161 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/post-quantum_signature/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/post-quantum_signature/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/privacy-preserving_ml_with_zk/index.html" class="article-link">Privacy Preserving_Ml_With_Zk</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">29,366 words</span>
+                            <span class="reading-time">146 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/privacy-preserving_ml_with_zk/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/privacy-preserving_ml_with_zk/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/proof_of_logits_pol/index.html" class="article-link">Proof_Of_Logits_Pol</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">5,432 words</span>
+                            <span class="reading-time">27 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/proof_of_logits_pol/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/proof_of_logits_pol/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/quantum-resistant/index.html" class="article-link">Quantum Resistant</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">25,426 words</span>
+                            <span class="reading-time">127 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/quantum-resistant/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/quantum-resistant/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    <div class="article-item">
+                        <h4><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/blob/main/articles/zero-knowledge/index.html" class="article-link">Zero Knowledge</a></h4>
+                        <div class="article-meta">
+                            <span class="word-count">29,715 words</span>
+                            <span class="reading-time">148 min read</span>
+                            <span class="created-date">Mon, 21 Jul 2025 15:27:31 GMT</span>
+                             <span class="download-links-inline"><a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/zero-knowledge/article.pdf" class="download-link-small pdf">PDF</a> <a href="https://github.com/AmbientCrypto/EncyclopediaGalacticaArticles/raw/main/articles/zero-knowledge/article.epub" class="download-link-small epub">EPUB</a></span>
+                        </div>
+                    </div>
+                
+                    </div>
+                </div>
+            
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>Generated using LongWriter AgentWrite methodology • Last updated: 2025-07-22 12:52:35</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Simple search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const articles = document.querySelectorAll('.article-item');
+            
+            articles.forEach(article => {
+                const title = article.querySelector('.article-link').textContent.toLowerCase();
+                const isVisible = title.includes(searchTerm);
+                article.style.display = isVisible ? 'block' : 'none';
+            });
+            
+            // Hide/show empty categories
+            const categories = document.querySelectorAll('.category-section');
+            categories.forEach(category => {
+                const visibleArticles = category.querySelectorAll('.article-item[style*="block"], .article-item:not([style*="none"])');
+                category.style.display = visibleArticles.length > 0 ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
