@@ -1,0 +1,259 @@
+{
+  "collection_name": "technology_collection",
+  "collection_id": "technology_collection",
+  "description": "Technology and Computer Science Collection",
+  "author": "Tech Encyclopedia Team",
+  "created": "2025-08-09",
+  "source_file": "topic_trees/TechnologyTree_20250809_104552_simple.json",
+  "annotation_date": "2025-08-09T10:46:29.208077",
+  "annotation_version": "1.0",
+  "annotated_tree": {
+    "name": "Topics",
+    "topic": "Topics",
+    "children": [
+      {
+        "name": "Artificial Intelligence",
+        "topic": "Artificial Intelligence",
+        "children": [
+          {
+            "name": "Machine Learning",
+            "topic": "Machine Learning",
+            "children": [
+              {
+                "name": "Deep Learning Algorithms",
+                "topic": "Deep Learning Algorithms",
+                "guid": "91d7e607-617a-4db2-b7d4-30edc6eadb35",
+                "path": "Topics > Artificial Intelligence > Machine Learning > Deep Learning Algorithms",
+                "parent_path": "Topics > Artificial Intelligence > Machine Learning"
+              }
+            ],
+            "guid": "e390ae91-f9d8-4c52-a1e1-6eace4e40d0a",
+            "path": "Topics > Artificial Intelligence > Machine Learning",
+            "parent_path": "Topics > Artificial Intelligence"
+          },
+          {
+            "name": "Natural Language Processing",
+            "topic": "Natural Language Processing",
+            "children": [
+              {
+                "name": "Text Classification",
+                "topic": "Text Classification",
+                "guid": "0c50aa94-b632-4b10-9e2e-8a810f1dbdf9",
+                "path": "Topics > Artificial Intelligence > Natural Language Processing > Text Classification",
+                "parent_path": "Topics > Artificial Intelligence > Natural Language Processing"
+              }
+            ],
+            "guid": "bd4bc80d-8b56-4fd9-be9f-21ef69f4d0a6",
+            "path": "Topics > Artificial Intelligence > Natural Language Processing",
+            "parent_path": "Topics > Artificial Intelligence"
+          }
+        ],
+        "guid": "fdb8b618-bc8e-43e7-a218-9643fe30e870",
+        "path": "Topics > Artificial Intelligence",
+        "parent_path": "Topics"
+      },
+      {
+        "name": "Quantum Computing",
+        "topic": "Quantum Computing",
+        "children": [
+          {
+            "name": "Quantum Algorithms",
+            "topic": "Quantum Algorithms",
+            "children": [
+              {
+                "name": "Quantum Simulation Algorithms",
+                "topic": "Quantum Simulation Algorithms",
+                "guid": "de10fd45-7894-416d-ab41-2e5cf5ecdb35",
+                "path": "Topics > Quantum Computing > Quantum Algorithms > Quantum Simulation Algorithms",
+                "parent_path": "Topics > Quantum Computing > Quantum Algorithms"
+              }
+            ],
+            "guid": "993fe2ac-6938-4d6f-9b37-ab3289fec84e",
+            "path": "Topics > Quantum Computing > Quantum Algorithms",
+            "parent_path": "Topics > Quantum Computing"
+          },
+          {
+            "name": "Quantum Hardware",
+            "topic": "Quantum Hardware",
+            "children": [
+              {
+                "name": "Quantum Processor Architecture",
+                "topic": "Quantum Processor Architecture",
+                "guid": "887c4b21-4a25-42de-9fea-7fc5b853df90",
+                "path": "Topics > Quantum Computing > Quantum Hardware > Quantum Processor Architecture",
+                "parent_path": "Topics > Quantum Computing > Quantum Hardware"
+              }
+            ],
+            "guid": "f12c2b9c-1065-4479-b977-fa172f94dda2",
+            "path": "Topics > Quantum Computing > Quantum Hardware",
+            "parent_path": "Topics > Quantum Computing"
+          }
+        ],
+        "guid": "ea53e0bb-47c8-4c06-987f-e0bd375094b3",
+        "path": "Topics > Quantum Computing",
+        "parent_path": "Topics"
+      },
+      {
+        "name": "Blockchain Technology",
+        "topic": "Blockchain Technology",
+        "children": [
+          {
+            "name": "Blockchain Development",
+            "topic": "Blockchain Development",
+            "children": [
+              {
+                "name": "Smart Contract Development",
+                "topic": "Smart Contract Development",
+                "guid": "18381448-bf9e-45de-bd26-9845e520b1a2",
+                "path": "Topics > Blockchain Technology > Blockchain Development > Smart Contract Development",
+                "parent_path": "Topics > Blockchain Technology > Blockchain Development"
+              }
+            ],
+            "guid": "989641b4-2e01-47f1-a316-ea9708477cc8",
+            "path": "Topics > Blockchain Technology > Blockchain Development",
+            "parent_path": "Topics > Blockchain Technology"
+          },
+          {
+            "name": "Cryptocurrency Systems",
+            "topic": "Cryptocurrency Systems",
+            "children": [
+              {
+                "name": "Digital Wallet Systems",
+                "topic": "Digital Wallet Systems",
+                "guid": "07566696-bbb3-4887-9acf-9fa554140f70",
+                "path": "Topics > Blockchain Technology > Cryptocurrency Systems > Digital Wallet Systems",
+                "parent_path": "Topics > Blockchain Technology > Cryptocurrency Systems"
+              },
+              {
+                "name": "Token Exchange Mechanisms",
+                "topic": "Token Exchange Mechanisms",
+                "guid": "3aac5df5-c21e-4429-8b25-7bd12abcef85",
+                "path": "Topics > Blockchain Technology > Cryptocurrency Systems > Token Exchange Mechanisms",
+                "parent_path": "Topics > Blockchain Technology > Cryptocurrency Systems"
+              }
+            ],
+            "guid": "912b9d72-c119-4d16-bec9-080d532259f6",
+            "path": "Topics > Blockchain Technology > Cryptocurrency Systems",
+            "parent_path": "Topics > Blockchain Technology"
+          }
+        ],
+        "guid": "75c0a6ea-7589-4115-9280-ce715183fb24",
+        "path": "Topics > Blockchain Technology",
+        "parent_path": "Topics"
+      },
+      {
+        "name": "Cybersecurity",
+        "topic": "Cybersecurity",
+        "children": [
+          {
+            "name": "Network Security",
+            "topic": "Network Security",
+            "children": [
+              {
+                "name": "Firewall Configuration",
+                "topic": "Firewall Configuration",
+                "guid": "b79135fb-b732-4ed7-8832-f2c5008bee2b",
+                "path": "Topics > Cybersecurity > Network Security > Firewall Configuration",
+                "parent_path": "Topics > Cybersecurity > Network Security"
+              },
+              {
+                "name": "Intrusion Detection",
+                "topic": "Intrusion Detection",
+                "guid": "6876e7f2-32bf-4f30-b681-80bfab155bf0",
+                "path": "Topics > Cybersecurity > Network Security > Intrusion Detection",
+                "parent_path": "Topics > Cybersecurity > Network Security"
+              }
+            ],
+            "guid": "42888810-6b88-4ec2-a59e-20c6c830b678",
+            "path": "Topics > Cybersecurity > Network Security",
+            "parent_path": "Topics > Cybersecurity"
+          },
+          {
+            "name": "Threat Analysis",
+            "topic": "Threat Analysis",
+            "children": [
+              {
+                "name": "Vulnerability Assessment",
+                "topic": "Vulnerability Assessment",
+                "guid": "2225eceb-4ab8-40b3-9eaa-3a802b8aa971",
+                "path": "Topics > Cybersecurity > Threat Analysis > Vulnerability Assessment",
+                "parent_path": "Topics > Cybersecurity > Threat Analysis"
+              },
+              {
+                "name": "Risk Identification",
+                "topic": "Risk Identification",
+                "guid": "d6d2f102-ed22-4a5e-9e0c-f643cff1b2e5",
+                "path": "Topics > Cybersecurity > Threat Analysis > Risk Identification",
+                "parent_path": "Topics > Cybersecurity > Threat Analysis"
+              }
+            ],
+            "guid": "d50cbcc0-f28b-401d-b67c-c9e11e3f74d9",
+            "path": "Topics > Cybersecurity > Threat Analysis",
+            "parent_path": "Topics > Cybersecurity"
+          }
+        ],
+        "guid": "5d684d1e-8206-4be6-b6e9-38c7bfa4a9d9",
+        "path": "Topics > Cybersecurity",
+        "parent_path": "Topics"
+      },
+      {
+        "name": "Cloud Computing",
+        "topic": "Cloud Computing",
+        "children": [
+          {
+            "name": "Cloud Infrastructure",
+            "topic": "Cloud Infrastructure",
+            "children": [
+              {
+                "name": "Cloud Storage Systems",
+                "topic": "Cloud Storage Systems",
+                "guid": "773ac69b-e469-4d1c-9e5f-a52d1fce3c23",
+                "path": "Topics > Cloud Computing > Cloud Infrastructure > Cloud Storage Systems",
+                "parent_path": "Topics > Cloud Computing > Cloud Infrastructure"
+              },
+              {
+                "name": "Virtual Network Architecture",
+                "topic": "Virtual Network Architecture",
+                "guid": "d03a11ff-bea6-446a-b322-46c156b12a5f",
+                "path": "Topics > Cloud Computing > Cloud Infrastructure > Virtual Network Architecture",
+                "parent_path": "Topics > Cloud Computing > Cloud Infrastructure"
+              }
+            ],
+            "guid": "27eb1918-23ee-4ebf-9609-f3506125cbac",
+            "path": "Topics > Cloud Computing > Cloud Infrastructure",
+            "parent_path": "Topics > Cloud Computing"
+          },
+          {
+            "name": "Cloud Security",
+            "topic": "Cloud Security",
+            "children": [
+              {
+                "name": "Cloud Data Encryption",
+                "topic": "Cloud Data Encryption",
+                "guid": "0cbad922-6bd0-4147-9219-7762d051c333",
+                "path": "Topics > Cloud Computing > Cloud Security > Cloud Data Encryption",
+                "parent_path": "Topics > Cloud Computing > Cloud Security"
+              },
+              {
+                "name": "Compliance and Governance",
+                "topic": "Compliance and Governance",
+                "guid": "0ca3e8d2-3fe4-4072-a78c-d782cbe9e31d",
+                "path": "Topics > Cloud Computing > Cloud Security > Compliance and Governance",
+                "parent_path": "Topics > Cloud Computing > Cloud Security"
+              }
+            ],
+            "guid": "0fb9d74e-b6e1-4e7c-ba2f-68ef8c80788d",
+            "path": "Topics > Cloud Computing > Cloud Security",
+            "parent_path": "Topics > Cloud Computing"
+          }
+        ],
+        "guid": "48d25f4c-9fa5-474f-82a1-ff3c7bab9626",
+        "path": "Topics > Cloud Computing",
+        "parent_path": "Topics"
+      }
+    ],
+    "guid": "a1fc556b-5cf6-4174-9684-6ff8394fea85",
+    "path": "Topics",
+    "parent_path": null
+  }
+}
